@@ -24,8 +24,8 @@ refereeing is not claimed.
 ## Mathematical scope
 
 Let $I,O,H$ be natural numbers, with $I,O\geq 1$. For a target matrix
-$\Phi\in\mathbb R^{O\times I}$ of rank $r<H$, consider
-$A\in\mathbb R^{H\times I}$, $B\in\mathbb R^{O\times H}$, and
+$\Phi\in\mathbb{R}^{O\times I}$ of rank $r<H$, consider
+$A\in\mathbb{R}^{H\times I}$, $B\in\mathbb{R}^{O\times H}$, and
 
 $$
 L_\Phi(A,B)=\tfrac12\lVert BA-\Phi\rVert_F^2,
@@ -37,12 +37,12 @@ entries**, with the Euclidean norm obtained by summing the squared entries of
 both factors. At a point $w=(A,B)$, the local pair $(\lambda,m)$ describes
 
 $$
-\operatorname{vol}\{z:\lVert z-w\rVert<\delta,\quad
+\mathrm{vol}\{z:\lVert z-w\rVert<\delta,\quad
  |L_\Phi(z)-L_\Phi(w)|<\varepsilon\}
 \asymp \varepsilon^\lambda\bigl(\log(1/\varepsilon)\bigr)^{m-1}.
 $$
 
-Here $\lambda\geq0$ and $m\in\mathbb N$, $m\geq1$. The assertion is
+Here $\lambda\geq0$ and $m\in\mathbb{N}$, $m\geq1$. The assertion is
 **radius-first**: there exists $\delta_0>0$ such that for every
 $0<\delta<\delta_0$, there are positive lower/upper comparison constants and
 an $\varepsilon$ cutoff below $e^{-1}$ for which the two bounds hold for every
@@ -51,7 +51,7 @@ and $\delta$, but not on $\varepsilon$. Balls and band inequalities are strict.
 The formalization uses this measured predicate, not a definition that simply
 assigns the proposed formula to the phrase “learning coefficient.”
 
-At an exact fit, write $a=\operatorname{rank}A$, $b=\operatorname{rank}B$, and set
+At an exact fit, write $a=\mathrm{rank}A$, $b=\mathrm{rank}B$, and set
 
 $$
 p=O-b,\quad q=I-a,\quad h=H+r-a-b,\quad s=Oa+b(I-a),
@@ -206,3 +206,14 @@ These acknowledgements do not imply that those contributors have reviewed or
 endorsed this repository. No priority claim is made here for the previously
 posted fiber or saddle formulas. The manuscript contains the detailed literature
 references and attribution.
+
+## License
+
+The original Lean code, scripts, configuration files, and code listings are
+licensed under [Apache License 2.0](LICENSE). The manuscript and other original
+non-code documentation are licensed under
+[Creative Commons Attribution 4.0 International](LICENSE-DOCS).
+
+Both licenses permit copying, modification, redistribution, and commercial use,
+subject to their terms. See [LICENSING.md](LICENSING.md) for the scope and
+attribution information. Third-party materials retain their own licenses.
