@@ -4,19 +4,27 @@ A Lean 4 development and accompanying mathematical manuscript for the
 **two-sided band-volume formulation** of
 [MAIS-O77](https://github.com/Math-for-AI-Safety/MAIS/blob/main/open-problems/MAIS-O77.md).
 
-**Status:** the published Lean file has passed compilation and a separate
-`leanchecker` kernel replay. The final theorem has no Wishart hypothesis.
-Human review of the mathematics and of the correspondence between the formal
-statements and the intended problem remains in progress. This repository is
-made public for scrutiny, reproduction, and correction; completed human
-refereeing is not claimed.
+**Status — statement review reported 17 October 2026:** the published Lean
+file has passed compilation and a separate `leanchecker` kernel replay. The
+final theorem has no Wishart hypothesis. Niels Feld has personally reviewed
+the main Lean statement and the upstream definitions needed to interpret it.
+In his judgment, they faithfully express an answer to the natural-language
+MAIS-O77 question in its two-sided band-volume formulation, under the stated
+hypotheses.
+
+This records Feld's specification review. Independent refereeing and complete
+personal understanding of the proof remain separate tasks. The repository
+remains open to scrutiny, reproduction, and correction. This documentation
+update leaves the checked Lean file unchanged.
 
 ## Start here
 
 | File | Purpose |
 |---|---|
-| [Manuscript PDF](mais-o77-blueprint_2026_10_06_20_50_UTC.pdf) | Part I is the human-facing preprint and specification guide; Part II gives detailed explanations alongside the Lean development. |
-| [Manuscript TeX](mais-o77-blueprint_2026_10_06_20_50_UTC.tex) | Source of the manuscript. |
+| [Manuscript PDF](mais-o77-blueprint_2026_10_17_15_54_UTC.pdf) | Part I is the human-facing preprint and specification guide; Part II gives detailed explanations alongside the Lean development. |
+| [Manuscript TeX](mais-o77-blueprint_2026_10_17_15_54_UTC.tex) | Source of the manuscript. |
+| [Lecture slides PDF](mais_o77_lectures_2026_10_17_15_54_UTC.pdf) | Five lectures for geometers: motivation, the formal statement and definitions, and a proof outline. |
+| [Lecture slides TeX](mais_o77_lectures_2026_10_17_15_54_UTC.tex) | Editable Beamer source; quoted Lean declarations and a statement-audit index. |
 | [Lean source](O77Full_2026_10_06_20_50_UTC.lean) | Single project file, requiring the pinned Mathlib environment below. |
 | [Local checking package](o77-local_2026_10_06_22_09_UTC.tar.gz) | Podman scripts, setup instructions, statement-shape probes, and historical logs. |
 | [7 October 2026 recheck log](recheck-20261007T222112Z-GHTD7O.log) | Source hashes, resolved dependencies, and successful build/replay exit statuses. |
@@ -166,18 +174,30 @@ definitions.
 ## Human review and feedback
 
 The development was produced predominantly with language models under Niels
-Feld's direction. He has run the Lean checks and is reviewing the manuscript,
-but does not yet claim to have independently verified or fully understood the
-whole mathematical argument.
+Feld's direction. On 17 October 2026 he reported that he had personally
+reviewed `O77.answersO77`, its conclusion `O77.AnswersO77`, and the upstream
+definitions needed to interpret them. In his judgment, these express the
+intended two-sided band-volume O77 question under its stated hypotheses.
 
-The most useful review concerns the correspondence between the intended problem
-and the formal definitions: the original-entry measure and norm; the order of
-radius/epsilon quantifiers; rank arithmetic and minimum-locus conditions; and
-both annihilation clauses in saddle-rung membership. Part I of the manuscript
-collects the statements and definitions for this purpose. Reproduction reports,
-mathematical corrections, and clearer exposition are welcome through this
-repository's issues. Please identify the source filename or commit, and include
-a complete log for checking failures.
+The reviewed source is `O77Full_2026_10_06_20_50_UTC.lean`, with the SHA-256
+given above, in the previously announced
+[repository snapshot](https://github.com/nfeld/mais-o77-lean/tree/f4766ac0a2875cce22aa835c59b6b02beb02b698).
+The review concerns the original-entry loss, measure and norm; the
+radius/epsilon quantifiers; rank arithmetic and the minimum locus; attained
+extrema; and both annihilation clauses in saddle-rung membership.
+
+Feld has also worked through the mathematical exposition, but does not yet
+claim complete personal understanding or an independent verification of every
+part of the proof. His specification review and the existing mechanical checks
+provide distinct evidence. Independent review remains welcome. No Comparator
+run is claimed.
+
+Part I of the manuscript collects the formal statements and definitions. The
+lecture slides introduce them more gradually and give a mathematical proof
+outline; they do not replace the Lean source or its checking log. Reproduction
+reports, mathematical corrections, and clearer exposition are welcome through
+this repository's issues. Please identify the source filename or commit, and
+include a complete log for checking failures.
 
 ## Development and acknowledgements
 
