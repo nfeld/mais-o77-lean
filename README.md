@@ -17,6 +17,14 @@ personal understanding of the proof remain separate tasks. The repository
 remains open to scrutiny, reproduction, and correction. This documentation
 update leaves the checked Lean file unchanged.
 
+An arbitrary-depth generalization of the exact-fit part (a) is now available:
+[nfeld/deep-linear-exact-fits](https://github.com/nfeld/deep-linear-exact-fits).
+
+That repository contains a preprint and Lean formalization determining the
+local band-volume exponent and logarithmic multiplicity at every exact fit
+of a deep linear network, together with checking instructions and an AI-use
+disclosure.
+
 ## Start here
 
 | File | Purpose |
